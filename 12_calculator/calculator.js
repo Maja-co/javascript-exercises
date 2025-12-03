@@ -1,26 +1,34 @@
-const add = function() {
-	
+function add(a, b) {
+	return a + b
 };
 
-const subtract = function() {
-	
+function subtract(a, b) {
+	return a - b
 };
 
-const sum = function() {
-	
+function sum() {
+  return array.reduce((total, current) => total + current, 0);
 };
 
-const multiply = function() {
-
+function multiply(array) {
+  // Bruger reduce, men starter med 1 (fordi man ikke kan gange med 0)
+  return array.length ? array.reduce((total, current) => total * current, 1) : 0;
 };
 
-const power = function() {
-	
-};
+function power(base, exponent) {
+  return Math.pow(base, exponent); 
+}
 
-const factorial = function() {
-	
-};
+function factorial(n) {
+  if (n === 0) return 1; // Matematisk regel
+
+  let product = 1;
+  // Start fra 1 og gang op til n (eller start fra n og gang ned til 1)
+  for (let i = 1; i <= n; i++) {
+    product = product * i;
+  }
+  return product;
+}
 
 // Do not edit below this line
 module.exports = {
